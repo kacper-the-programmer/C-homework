@@ -20,10 +20,7 @@ int main()
 	{
 		grades[i] = 1 + rand() % 6;
 		std::wcout << i + 1 << ": " << grades[i] << ", \n";
-	}
 
-	for (int i = 0; i < students; i++)
-	{
 		average_grade += grades[i];
 		if (grades[i] >= 5) {
 			good_grades += std::to_wstring(i + 1) + L", ";
@@ -32,6 +29,7 @@ int main()
 			bad_grades += std::to_wstring(i + 1) + L", ";
 		}
 	}
+
 	std::wcout << L"\noceny powyżej piątki: " << good_grades;
 	std::wcout << L"\noceny równe jeden: " << bad_grades;
 
